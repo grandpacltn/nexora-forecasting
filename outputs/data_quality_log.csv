@@ -1,0 +1,12 @@
+Check,Finding,Action
+Missing values,None in any column except HolidayName,None needed
+HolidayName nulls,"128,414 empty, matches IsHoliday = False exactly","Kept as is, valid nulls"
+Exact duplicate rows,0 found,None needed
+Duplicate AppointmentID,0 found,None needed
+Near-duplicate (ignoring ID),"1 pair found: IDs 625580 and 625614 (Hillcrest, 2025-10-29 10:30)","Removed 625614, kept 625580"
+Date format,"All 129,353 values in one format, no conversion failures",Converted to datetime
+Date range,2024-01-01 to 2025-12-31 (brief said one quarter),Documented difference from the brief
+Categorical spellings,"No variants in clinic, status, type, channel or season",None needed
+Lead time values,"0 to 60 days, no negatives",None needed
+Clinic closures,"Sundays closed at clinics 1, 2 and 4; Hillcrest opened 2024-06-29","Closed days left out of daily counts, not filled with zeros"
+Quiet days,"Lowest days are public holidays, not zero-volume closures","Kept, real holiday demand dips"
