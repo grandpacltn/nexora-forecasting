@@ -1,0 +1,16 @@
+{
+  "features": [
+    "ClinicID",
+    "DayOfWeek",
+    "Month",
+    "IsHoliday",
+    "DayAfterHoliday",
+    "IsFluSeason",
+    "DaysSinceStart",
+    "Lag7",
+    "Lag14",
+    "Lag28",
+    "Roll28"
+  ],
+  "sklearn_version": "1.7.2"
+}
